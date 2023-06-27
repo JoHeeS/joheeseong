@@ -1,0 +1,2328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS 튜토리얼</title>
+</head>
+<body>
+
+  <!-- <pre>
+    CSS 튜토리얼
+
+    1 선택자
+    - 엘리먼트 선택자
+    - 클래스 선택자
+    - id 선택자
+    - 자식 선택자
+    - Pseudo Class
+
+    2 규칙
+    - 단위
+    - 색상 표기법
+
+    3 타이포그래피
+    - font size
+    - font style
+    - font weight
+    - text align
+    - letter spacing
+    - line height
+
+    4 엘리먼트 스타일
+    - display
+    - color, background color
+    - border
+    - padding
+    - margin
+    - width
+    - min width
+    - max width
+    - height
+    - min height
+    - max height
+    - box sizing
+    - overflow
+    - white space
+    - position
+    - transform
+
+    5 이미지
+    - img
+    - background image
+
+    6 레이아웃
+    - flex
+    - grid
+
+    7 반응형
+    - media rule
+  </pre> -->
+
+
+  <!-- <h1>엘리먼트 선택자</h1>
+
+  <style>
+    /* 엘리먼트의 이름으로 선택한다 */
+    ul {
+      /* 두께 1px이고 실선 스타일의 경계선 */
+      border: 1px solid;
+    }
+  </style>
+
+  <ul>
+    <li>list item</li>
+    <li>list item</li>
+    <li>list item</li>
+  </ul> -->
+
+
+  <!-- <h1>클래스 선택자</h1>
+
+  <style>
+    .underline {
+      /* 밑줄 */
+      text-decoration: underline;
+    }
+    .italic {
+      /* 이탤릭체(기울임) */
+      font-style: italic;
+    }
+  </style>
+
+  <ul>
+    <li class="italic underline">list item</li>
+    <li class="italic">list item</li>
+    <li>list item</li>
+  </ul> -->
+
+
+  <!-- <h1>id 선택자</h1>
+
+  <style>
+    #first {
+      /* 밑줄 */
+      text-decoration: underline;
+    }
+  </style>
+
+  <ul>
+    <li id="first">list item</li>
+    <li>list item</li>
+    <li>list item</li>
+  </ul> -->
+
+
+  <!-- <h1>자식 선택자</h1>
+
+  <style>
+    /* parent children */
+    main ul {
+      border: 1px solid
+    }
+  </style>
+
+  <nav>
+    <h1>Menu</h1>
+    <ul>
+      <li>list item</li>
+      <li>list item</li>
+      <li>list item</li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Contents</h1>
+    <ul>
+      <li>list item</li>
+      <li>list item</li>
+      <li>list item</li>
+    </ul>
+  </main> -->
+
+
+  <!-- <h1>Pseudo Class</h1>
+  <p>
+    엘리먼트의 특별한 상태를 나타낸다
+  </p>
+
+  <style>
+    /* selector:pseudo-class */
+    li:hover {
+      text-decoration: underline;
+    }
+  </style>
+
+  <ul>
+    <li>list item</li>
+    <li>list item</li>
+    <li>list item</li>
+  </ul> -->
+
+
+  <!-- <h1>CSS 단위(길이)</h1>
+
+
+  <style>
+    body {
+      font-size: 14px;
+    }
+
+    .px {
+      font-size: 16px;
+    }
+
+    .rem {
+      font-size: 1rem;
+    }
+
+    .em {
+      font-size: 1em;
+    }
+
+    .percent {
+      font-size: 100%;
+    }
+
+    .vw {
+      font-size: 10vw;
+    }
+
+    .vh {
+      font-size: 10vh;
+    }
+  </style>
+
+  <h3>px (pixel)</h3>
+  <p>절대값</p>
+  <p class="px">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+
+  <h3>rem (root element)</h3>
+  <p>루트 엘리먼트에 상대적이다. 1rem = root element의 폰트사이즈</p>
+  <p class="rem">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+
+  <h3>em (element)</h3>
+  <p>부모 엘리먼트에 상대적이다. 1em = 부모 엘리먼트의 폰트사이즈</p>
+  <p class="em">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+
+  <h3>percent</h3>
+  <p>부모 엘리먼트에 상대적이다. 100% = 부모 엘리먼트의 폰트사이즈</p>
+  <p class="percent">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+
+  <h3>vw (viewport width)</h3>
+  <p>뷰포트 넓이에 상대적이다. 100vw = viewport width</p>
+  <p class="vw">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+
+  <h3>vh (viewport height)</h3>
+  <p>뷰포트 높이에 상대적이다. 100vh = viewport height</p>
+  <p class="vh">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p> -->
+
+
+  <!-- <h1>색상 표기방법</h1>
+
+  <style>    
+    .name {
+      /* 색상 이름 */
+      color: red;
+    }
+    .rgb {
+      /* rgb(red green blue) */
+      /* 0 - 255 */
+      color: rgb(255 0 0)
+    }
+    .rgba {
+      /* 
+        rgba(red green blue / opactiy) 
+        opacity: 0 (완전투명) - 1 (완전불투명)
+      */
+      color: rgba(255 0 0 / 0.5)
+    }
+    .hex {
+      /* 
+        hexadecimal(16진수) 표기 
+        0 - 9 a - f
+        #rrggbb
+      */
+      color: #ff0000;
+    }
+    .hex-3 {
+      /* 
+        16진수 표기
+        #rgb
+      */
+      color: #f00;
+    }
+  </style>
+
+  <ul>
+    <li class="name">list item</li>
+    <li class="rgb">list item</li>
+    <li class="rgba">list item</li>
+    <li class="hex">list item</li>
+    <li class="hex-3">list item</li>
+  </ul> -->
+
+
+  <!-- <h1>font size</h1>
+
+  <style>
+    .text-xs {
+      font-size: 0.75rem;
+    }
+
+    .text-base {
+      font-size: 1rem;
+    }
+
+    .text-2xl {
+      font-size: 1.5rem;
+    }
+  </style>
+
+  <h3>font size: 0.75rem</h3>
+  <p class="text-xs">list item</p>
+
+  <h3>font size: 1rem (default)</h3>
+  <p class="text-base">list item</p>
+
+  <h3>font size: 1.5rem</h3>
+  <p class="text-2xl">list item</p> -->
+
+
+  <!-- <h1>font style</h1>
+
+  <style>
+    .not-italic {
+      font-style: normal;
+    }
+    .italic {
+      font-style: italic
+    }
+  </style>
+
+
+  <h3>font style: normal (default)</h3>
+  <p class="not-italic">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+  <h3>font style: italic</h3>
+  <p class="italic">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p> -->
+
+
+  <!-- <h1>font weight</h1>
+  <p>100 - 900, 100단위씩 증가</p>
+
+  <style>
+    .font-thin {
+      font-weight: 100;
+    }
+    .font-normal {
+      font-weight:  400
+    }
+    .font-bold {
+      font-weight: 700;
+    }
+  </style>
+
+  <h3>font weight: 100</h3>
+  <p class="font-thin">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+  <h3>font weight: 400 (normal)</h3>
+  <p class="font-normal">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+  <h3>font weight: 700</h3>
+  <p class="font-bold">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p> -->
+
+
+  <!-- <h1>text align</h1>
+  <p>텍스트 정렬</p>
+
+  <style>
+    .text-left {
+      text-align: left
+    }
+    .text-center {
+      text-align: center
+    }
+    .text-right {
+      text-align: right
+    }
+  </style>
+
+  <h3>text align: left (default)</h3>
+  <p class="text-left">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+  </p>
+
+  <h3>text align: center</h3>
+  <p class="text-center">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+  </p>
+
+  <h3>text align: right</h3>
+  <p class="text-right">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+  </p> -->
+
+
+  <!-- <h1>letter spacing</h1>
+  <p>글자 간격 </p>
+
+  <style>
+    .tracking-tightest {
+      letter-spacing: -0.05em;
+    }
+
+    .tracking-normal {
+      letter-spacing: 0em;
+    }
+
+    .tracking-widest {
+      letter-spacing: 0.1em;
+    }
+  </style>
+
+  <h3>letter spacing: -0.05em</h3>
+  <p class="tracking-tightest">
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+  </p>
+
+  <h3>letter spacing: 0em (default)</h3>
+  <p class="tracking-normal">
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+  </p>
+
+  <h3>letter spacing: 0.1em</h3>
+  <p class="tracking-widest">
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+  </p> -->
+
+
+  <!-- <h1>line height</h1>
+  <p>줄 높이(줄 간격)</p>
+
+  <style>
+    .leading-none {
+      line-height: normal
+    }
+    .leading-8 {
+      line-height: 2rem;
+    }
+  </style>
+
+  <h3>line height: normal (default)</h3>
+  <p class="leading-none">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    Autem hic odio, dolore unde expedita ad voluptatibus nostrum
+    perspiciatis architecto reiciendis quia, 
+    voluptate ipsum tempore tenetur? Voluptatem est non omnis illum. 
+  </p>
+
+  <h3>line height: 2rem</h3>
+  <p class="leading-8">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    Autem hic odio, dolore unde expedita ad voluptatibus nostrum
+    perspiciatis architecto reiciendis quia, 
+    voluptate ipsum tempore tenetur? Voluptatem est non omnis illum. 
+  </p> -->
+
+
+  <!-- <h1>Q. Typography</h1>
+
+  <style>
+    .text-center {
+      text-align: center;
+    }
+    .tracking-widest {
+      letter-spacing: 0.1em;
+    }
+    .italic {
+      font-style: italic;
+    }
+    .leading-8 {
+      line-height: 2rem;
+    }
+  </style>
+
+  <h3 class="text-center tracking-widest">GUINNESS</h3>
+
+  <p class="text-center leading-8">
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+    Ex, itaque voluptas beatae ducimus, 
+    harum, dicta hic veniam architecto qui debitis id perspiciatis 
+    temporibus iure expedita. Velit libero sit nobis unde.
+  </p>
+
+  <p class="text-center italic">
+    Dublin, Ireland
+  </p> -->
+
+
+  <!-- <h1>display</h1>
+  <p>엘리먼트 배열 방식</p>
+
+  <style>
+    .item {
+      background-color: #ddd;
+    }
+
+    .block {
+      display: block;
+    }
+
+    .inline-block {
+      display: inline-block;
+    }
+
+    .inline {
+      display: inline;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+
+  <h3>display: block</h3>
+  <pre>
+    부모 엘리먼트의 넓이를 모두 차지한다
+    div, p, main 등 대부분의 엘리먼트의 기본값
+  </pre>
+  <div class="item block">item</div>
+  <div class="item block">item</div>
+
+  <h3>display: inline-block</h3>
+  <pre>
+    컨텐츠에 필요한 만큼 넓이를 갖는다
+    button, input 등의 기본값
+  </pre>
+  <div class="item inline-block">item</div>
+  <div class="item inline-block">item</div>  
+
+  <h3>display: inline</h3>
+  <pre>
+    컨텐츠에 필요한 만큼 넓이를 갖는다
+
+    width, height 속성이 적용되지 않는다
+    y축 padding, margin이 적용되지 않는다
+
+    레이아웃용보다는 텍스트 처리에 적합하다
+
+    a, span, label 등의 기본값
+  </pre>
+  <div class="item inline">item</div>
+  <div class="item inline">item</div>
+
+  <h3>display: none</h3>
+  <div class="item hidden">item</div> -->
+
+
+  <!-- <h1>color, background-color</h1>
+  <pre>
+    background-color: 배경색
+    color: 텍스트 색
+  </pre>
+
+  <style>
+    ul {
+      background-color: #000;
+    }
+    
+    li {
+      color: #fff;
+    }
+  </style>
+  
+  <ul>
+    <li>list item</li>
+    <li>list item</li>
+    <li>list item</li>
+  </ul> -->
+
+
+  <!-- <h1>border</h1>
+  <p>경계선</p>
+
+  <style>
+    .border {
+      border-width: 1px;
+      border-style: solid;
+      border-color: #000;
+    }
+
+    .border-t {
+      border-top-width: 1px;
+      border-top-style: solid;
+      border-top-color: #000;
+    }
+
+    .border-x {
+      border-left-width: 1px;
+      border-left-style: solid;
+      border-left-color: #000;
+
+      border-right-width: 1px;
+      border-right-style: solid;
+      border-right-color: #000;
+    }
+  </style>
+
+  <h3>border on all sides</h3>
+  <div class="border">border</div>
+
+  <h3>border on top</h3>
+  <div class="border-t">border top</div>
+
+  <h3>border on x-axis</h3>
+  <div class="border-x">border x</div> -->
+
+
+  <!-- <h1>padding</h1>
+  <p>엘리먼트 내부의 공간</p>
+
+  <style>
+    .item {
+      background-color: #dddd;
+    }
+
+    .p-2 {
+      padding: 0.5rem;
+    }
+  
+    .pt-2 {
+      padding-top: 0.5rem;
+    }
+  
+    .px-2 {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+  </style>
+  
+  <h3>padding: 0</h3>
+  <div class="item">item</div>
+
+  <h3>padding: all</h3>
+  <div class="item p-2">item</div>
+
+  <h3>padding on top</h3>
+  <div class="item pt-2">item</div>
+
+  <h3>padding on x-axis</h3>
+  <div class="item px-2">item</div> -->
+
+  <!-- <h1>margin</h1>
+  <p>엘리먼트 외부의 공간</p>
+
+  <style>
+    .item {
+      background-color: #ddd;
+    }
+
+    .m-2 {
+      margin: 1rem;
+    }
+
+    .mt-2 {
+      margin-top: 1rem;
+    }
+
+    .mx-2 {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+  </style>
+
+
+  <h3>margin: 0</h3>
+  <div class="item">item</div>
+
+  <h3>margin: 1rem</h3>
+  <div class="item m-2">item</div>
+
+  <h3>margin top: 1rem</h3>
+  <div class="item mt-2">item</div>
+
+  <h3>margin x</h3>
+  <div class="item mx-2">item</div> -->
+
+
+  <!-- <h1>Q. Padding and Margin</h1>
+
+  <style>
+    button {
+      padding: 0.5rem;
+    }
+
+    .ml-2 {
+      margin-left: 0.5rem;
+    }
+  </style>
+
+  <h3>저장하시겠습니까?</h3>
+
+  <button>저장</button>
+  <button class="ml-2">취소</button> -->
+
+  
+  <!-- <h1>width</h1>
+  <p>넓이</p>
+
+  <style>
+    .item {
+      background-color: #ddd;
+    }
+
+    .w-auto {
+      width: auto;
+    }
+
+    .w-16 {
+      width: 4rem;
+    }
+
+    .block {
+      display: block;
+    }
+
+    .inline-block {
+      display: inline-block;
+    }
+  </style>
+
+  <h3>width: auto (default)</h3>
+  <div class="item block w-auto">item</div>
+  <div class="item block w-auto">item</div>
+  <div class="item block w-auto">item</div>
+
+  <h3>width: auto (display: inline-block)</h3>
+  <div class="item inline-block w-auto">item</div>
+  <div class="item inline-block w-auto">item</div>
+  <div class="item inline-block w-auto">item</div>
+
+  <h3>width: 4rem (display: block)</h3>
+  <div class="item block w-16">item</div>
+  <div class="item block w-16">item</div>
+  <div class="item block w-16">item</div>
+
+  <h3>width: 4rem (display: inline-block)</h3>
+  <div class="item inline-block w-16">item</div>
+  <div class="item inline-block w-16">item</div>
+  <div class="item inline-block w-16">item</div> -->
+
+
+  <!-- <h1>min width</h1>
+  <p>최소 넓이</p>
+
+  <style>
+    .item {
+      background-color: #ddd;
+    }
+    .min-w-600px {
+      min-width: 600px;
+    }
+  </style>
+
+
+  <h3>min width: 600px</h3>
+  
+  <div class="item min-w-600px">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    Rem cum voluptatibus ad pariatur eum obcaecati ut ullam quia possimus, 
+    distinctio eos nisi rerum illum, 
+    aspernatur voluptates veritatis eius dolor? Et.
+  </div> -->
+
+
+  <!-- <h1>max width</h1>
+  <p>최대 넓이</p>
+
+  <style>
+    .item {
+      background-color: #ddd;
+    }
+    .max-w-xl {
+      max-width: 36rem
+    }
+  </style>
+
+
+  <h3>max width: 20rem</h3>
+  <div class="item max-w-xl">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    Ea officiis fuga natus cupiditate consequatur porro fugiat excepturi omnis magnam? 
+    Assumenda nemo totam, atque non tempora ipsa repudiandae recusandae earum odit!
+  </div> -->
+
+
+  <!-- <h1>height</h1>
+  <p>높이</p>
+
+  <style>
+    .item {
+       background-color: #ddd;
+    }
+    
+    .h-auto {
+      height: auto;
+    }
+
+    .h-100px {
+      height: 100px;
+    }
+  </style>
+
+  <h3>height: auto (기본값)</h3>
+  <pre>
+    컨텐츠에 필요한 만큼 높이를 갖는다
+  </pre>
+  <div class="item h-auto">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores consectetur officiis possimus magni, ullam, aspernatur nesciunt voluptatibus ducimus perspiciatis voluptates fugiat quis doloribus consequuntur suscipit eius? Ullam nam corrupti ipsam.
+  </div>
+
+  <h3>height: 100px</h3>
+  <div class="item h-100px">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod labore et sunt nisi dolorem adipisci rerum saepe molestiae. Ducimus consectetur repudiandae ad ex maiores veritatis amet at enim ea. Numquam?
+  </div> -->
+
+
+  <!-- <h1>min height</h1>
+  <p>최소 높이</p>
+
+  <style>
+    .item {
+      background-color: #ddd;
+    }
+    .min-h-12 {
+      min-height: 3rem;
+    }
+  </style>
+
+  <h3>min-height: 3rem</h3>
+  <div class="item min-h-12">
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+  </div>
+
+  <h3>min-height: 3rem</h3>
+  <div class="item min-h-12">
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+    Illum ut consequuntur voluptates culpa labore corrupti porro reprehenderit accusantium,
+    temporibus quos odit expedita. Facere cumque excepturi nulla facilis aliquam vel mollitia?
+  </div> -->
+
+
+  <!-- <h1>max height</h1>
+  <p>최대 높이</p>
+
+  <style>
+    .item {
+      background-color: #ddd;
+    }
+    
+    .max-h-12 {
+      max-height: 3rem
+    }
+  </style>
+
+
+  <h3>max height: 3rem</h3>
+  <div class="item max-h-12">
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+  </div>
+
+  <h3>max height: 3rem</h3>
+  <div class="item max-h-12">
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+    Illum ut consequuntur voluptates culpa labore corrupti porro reprehenderit accusantium,
+    temporibus quos odit expedita. Facere cumque excepturi nulla facilis aliquam vel mollitia?
+  </div> -->
+
+  <!-- <h1>Q. Display, width, height</h1>
+
+  <style>
+    #ireland .item {
+      width: 50px;
+      height: 100px;
+      display: inline-block;
+    }
+
+    #netherlands .item {
+      width: 160px;
+      height: 40px;
+      display: block;
+    }
+
+    .bg-green {
+      background-color: green;
+    }
+
+    .bg-white {
+      background-color: #fff;
+    }
+
+    .bg-gold {
+      background-color: gold;
+    }
+
+    .bg-red {
+      background-color: red;
+    }
+
+    .bg-blue {
+      background-color: blue;
+    }
+  </style>
+
+  <h3>Ireland</h3>
+  <div id="ireland">
+    <div class="item bg-green"></div>
+    <div class="item bg-white"></div>
+    <div class="item bg-gold"></div>
+  </div>
+
+  <h3>Netherlands</h3>
+  <div id="netherlands">
+    <div class="item bg-red"></div>
+    <div class="item bg-white"></div>
+    <div class="item bg-blue"></div>
+  </div> -->
+
+
+  <!-- <h1>box sizing</h1>
+
+  <p>엘리먼트의 크기 조절</p>
+
+  <style>
+    .item {
+      width: 100px;
+      height: 100px;
+      border: 1px solid;
+      padding: 0.5rem;
+      background-color: #ddd;
+    }
+
+    .content-box {
+      box-sizing: content-box;
+    }
+
+    .border-box {
+      box-sizing: border-box;
+    }
+  </style>
+
+  <h3>box sizing: content box (default)</h3>
+  <pre>
+    padding과 border가 주어진 크기 밖으로 적용된다
+  </pre>
+  <div class="item content-box">118 x 118</div>
+
+  <h3>box sizing: border box</h3>
+  <pre>
+    padding과 border가 주어진 크기 안에 적용된다
+  </pre>
+  <div class="item border-box">100 x 100</div> -->
+
+
+  <!-- <h1>overflow</h1>
+  <p>넘치는 콘텐츠 처리 방법을 결정한다</p>
+
+  <style>
+    .container {
+      border: 1px solid;
+      height: 50px;
+    }
+
+    .overflow-hidden {
+      overflow: hidden;
+    }
+
+    .overflow-auto {
+      overflow: auto;
+    }
+
+    .overflow-visible {
+      overflow: visible;
+    }
+  </style>
+  
+  <h3>overflow: hidden</h3>
+  <pre>
+    넘치는 콘텐츠를 숨긴다
+  </pre>
+  <div class="container overflow-hidden">
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+    Hic maxime soluta provident nihil dolore accusamus, vitae adipisci, 
+    et repudiandae, eum aliquid inventore ratione blanditiis harum officia animi corrupti eligendi facere.
+  </div>
+  
+  <h3>overflow: auto</h3>
+  <pre>
+    콘텐츠가 넘치면 스크롤바를 생성한다
+  </pre>
+  <div class="container overflow-auto">
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+    Hic maxime soluta provident nihil dolore accusamus, vitae adipisci, 
+    et repudiandae, eum aliquid inventore ratione blanditiis harum officia animi corrupti eligendi facere.
+  </div>
+  
+  <h3>overflow: visible (default)</h3>
+  <pre>
+    넘치는 콘텐츠를 보이게 한다
+  </pre>
+  <div class="container overflow-visible">
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+    Hic maxime soluta provident nihil dolore accusamus, vitae adipisci, 
+    et repudiandae, eum aliquid inventore ratione blanditiis harum officia animi corrupti eligendi facere.
+  </div>   -->
+  
+  
+  <!-- <h1>white space</h1>
+  <p>컨테이너에서 남는 공간 처리</p>
+
+  <style>
+    .container {
+      border: 1px solid;
+    }
+
+    .item {
+      width: 200px; 
+      display: inline-block;
+      background-color: #ddd;
+    }
+
+    .whitespace-normal {
+      /* wrap */
+      white-space: normal
+    }
+
+    .whitespace-nowrap {
+      white-space: nowrap;
+    }
+  </style>
+
+
+  <h3>white space: normal (default)</h3>
+
+  <pre>
+    컨테이너의 넓이가 부족할 경우 아이템을 아래로 떨어뜨린다
+  </pre>
+
+  <div class="container whitespace-normal">
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+  </div>
+
+  <h3>white space: nowrap</h3>
+  <pre>
+    감싸지 않는다
+  </pre>
+  
+  <div class="container whitespace-nowrap">
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+  </div> -->
+
+
+  <!-- <h1>position: static</h1>
+  <pre>
+    엘리먼트가 움직이지 않는다
+  </pre>
+
+  <style>
+    .item {
+      background-color: #ddd;
+      display: inline-block;
+      padding: 0.5rem;
+    }
+    
+    .static {
+      position: static;
+    }
+  </style>
+
+
+  <div class="item static">item</div>
+  <div class="item static">item</div>
+  <div class="item static">item</div> -->
+
+
+  <!-- <h1>position: relative</h1>
+  <p>자신의 원래 위치에 상대적이다</p>
+
+  <style>
+    .item {
+      background-color: #ddd;
+      display: inline-block;
+      padding: 0.5rem;
+    }
+
+    .relative {
+      position: relative;
+    }
+
+    .top-2 {
+      top: 0.5rem;
+    }
+
+    .left-2 {
+      left: 0.5rem;
+    }
+  </style>
+
+  <div class="item">item</div>
+  <div class="item relative top-2 left-2">item</div>
+  <div class="item">item</div> -->
+
+
+  <!-- <h1>position: absolute</h1>
+  <p>relative 부모에 상대적이다</p>
+
+  <style>
+    .container {
+      border: 1px solid;
+      width: 100px;
+      height: 100px;
+    }
+    
+    .item {
+      background-color: #ddd;
+    }
+    
+    .relative {
+      position: relative;
+    }
+    
+    .absolute {
+      position: absolute;
+    }
+
+    .top-0 {
+      top: 0;
+    }
+
+    .left-0 {
+      left: 0;
+    }
+
+    .bottom-0 {
+      bottom: 0;
+    }
+    
+    .right-0 {
+      right: 0;
+    }
+  </style>
+
+  <div class="container relative">
+    <div class="item absolute top-0 left-0">item 1</div>
+    <div class="item absolute top-0 right-0">item 2</div>
+    <div class="item absolute bottom-0 left-0">item 3</div>
+    <div class="item absolute bottom-0 right-0">item 4</div>
+  </div> -->
+
+  <!-- <h1>position: fixed</h1>
+  <p>뷰포트에 상대적이다</p>
+
+  <style>
+    .item {
+      background-color: #ddd;
+      padding: 0.5rem;
+    }
+    
+    .fixed {
+      position: fixed;
+    }
+
+    .top-0 {
+      top: 0;
+    }
+
+    .left-0 {
+      left: 0;
+    }
+
+    .bottom-0 {
+      bottom: 0;
+    }
+    
+    .right-0 {
+      right: 0;
+    }
+  </style>
+
+  <div class="item fixed top-0 left-0">item 1</div>
+  <div class="item fixed top-0 right-0">item 2</div>
+  <div class="item fixed bottom-0 right-0">item 3</div>
+  <div class="item fixed bottom-0 left-0">item 4</div> -->
+
+
+  <!-- <h1>transform</h1>
+  <p>엘리먼트의 변형</p>
+
+  <style>
+    .item {
+      background-color: #ddd;
+      width: 100px;
+      height: 100px;
+    }
+
+    .translate-4 {
+      /* translate(x, y) */
+      transform: translate(1rem, 1rem);
+    }
+
+    .scale-110 {
+      transform: scale(1.1);
+    }
+
+    .rotate-12 {
+      transform: rotate(12deg);
+    }
+  </style>
+
+
+  <h3>transform: none(default)</h3>
+  <div class="item"></div>
+
+  <h3>transform: translate</h3>
+  <pre>
+    이동
+  </pre>
+  <div class="item translate-4"></div>
+
+  <h3>transform: scale</h3>
+  <pre>
+    크기
+  </pre>
+  <div class="item scale-110"></div>
+
+  <h3>transform: rotate</h3>
+  <pre>
+    회전
+  </pre>
+  <div class="item rotate-12"></div> -->
+
+  <!-- <h1>image</h1>
+
+  <style>
+    img {
+      width: 200px;
+      height: 200px;
+      border: 1px solid;
+    }
+
+    .object-fill {
+      /* default */
+      object-fit: fill;
+    }
+    
+    .object-contain {
+      object-fit: contain;
+    }
+    
+    .object-cover {
+      object-fit: cover;
+    }
+  </style>
+
+
+  <h3>object fit: fill</h3>
+  <pre>
+    이미지가 주어진 크기에 맞추어진다.
+    이미지가 늘어나거나 줄어들 수 있다
+  </pre>
+  <img 
+    class="object-fill"
+    src="https://mblogthumb-phinf.pstatic.net/MjAxODA0MDZfMjg2/MDAxNTIyOTQyNDMzNzY5.G_mEyvVOoHO-R1_zxnSqb5FHVj8i7fvIMCTEs7YRNa4g.B_uMy_wgK7w97evO8QU_3DV0pJnWBPyVsogvn1ha1w4g.JPEG.d2027/%EB%8B%A4%EB%9E%8C%EC%A5%90.jpg?type=w800" 
+    alt="" 
+  >
+
+  <h3>object fit: cover</h3>
+  <pre>
+    이미지가 주어진 크기에 맞추어진다
+    이미지의 원본비율을 유지한다
+  </pre>
+  <img 
+    class="object-cover"
+    src="https://mblogthumb-phinf.pstatic.net/MjAxODA0MDZfMjg2/MDAxNTIyOTQyNDMzNzY5.G_mEyvVOoHO-R1_zxnSqb5FHVj8i7fvIMCTEs7YRNa4g.B_uMy_wgK7w97evO8QU_3DV0pJnWBPyVsogvn1ha1w4g.JPEG.d2027/%EB%8B%A4%EB%9E%8C%EC%A5%90.jpg?type=w800" 
+    alt="" 
+  >
+    
+  <h3>object fit: contain</h3>
+  <pre>
+    이미지의 원본비율을 유지한다
+  </pre>
+  <img 
+    class="object-contain"
+    src="https://mblogthumb-phinf.pstatic.net/MjAxODA0MDZfMjg2/MDAxNTIyOTQyNDMzNzY5.G_mEyvVOoHO-R1_zxnSqb5FHVj8i7fvIMCTEs7YRNa4g.B_uMy_wgK7w97evO8QU_3DV0pJnWBPyVsogvn1ha1w4g.JPEG.d2027/%EB%8B%A4%EB%9E%8C%EC%A5%90.jpg?type=w800" 
+    alt="" 
+  > -->
+
+
+  <!-- <h1>background image</h1>
+
+  <style>
+    .container {
+      width: 200px;
+      border: 1px solid;
+      height: 200px;
+    }
+
+    .bg-image {
+      /* 이미지의 소스 */
+      background-image: url('https://mblogthumb-phinf.pstatic.net/MjAxODA0MDZfMjg2/MDAxNTIyOTQyNDMzNzY5.G_mEyvVOoHO-R1_zxnSqb5FHVj8i7fvIMCTEs7YRNa4g.B_uMy_wgK7w97evO8QU_3DV0pJnWBPyVsogvn1ha1w4g.JPEG.d2027/%EB%8B%A4%EB%9E%8C%EC%A5%90.jpg?type=w800');
+      /* 이미지의 크기 */
+      background-size: cover;
+      /* 이미지의 위치 */
+      background-position: center;
+    }
+  </style>
+
+  <h3>background image</h3>
+  <div class="container bg-image">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure illo ut quos atque! Minima alias quod placeat optio eius soluta aliquam! Delectus aspernatur distinctio a aliquam, exercitationem doloribus atque cupiditate.
+  </div> -->
+
+
+  <!-- <h1>flex</h1>
+  <p>레이아웃</p>
+
+  <style>
+    .container {
+      border: 1px solid;
+    }
+
+    .flex {
+      /* flex container */
+      display: flex;
+    }
+    
+    .item {
+      /* flex item */
+      padding: 0.5rem;
+      background-color: #ddd;
+    }
+  </style>
+
+  <div class="container flex">
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+  </div>
+
+  <pre>
+    1 flex container 속성
+    - flex direction
+    - flex wrap
+    - justify content
+    - align items
+
+    2 flex item 속성
+    - flex grow
+    - flex shrink
+    - flex basis
+    - flex order
+  </pre> -->
+
+
+  <!-- <h1>flex direction</h1>
+  <p>item의 배열방향</p>
+
+  <style>
+    .container {
+      border: 1px solid;
+    }
+     
+    .item {
+      background-color: #ddd;
+      padding: 0.5rem;
+    }
+    
+    .flex {
+      display: flex;
+    }
+
+    .flex-row {
+      flex-direction: row;
+    }
+
+    .flex-col {
+      flex-direction: column;
+    }
+  </style>
+
+
+  <h3>flex direction: row (default)</h3>
+  <div class="container flex flex-row">
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+  </div>
+
+
+  <h3>flex direction: column</h3>
+  <div class="container flex flex-col">
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+  </div> -->
+
+
+  <!-- <h1>flex wrap</h1>
+  <p>아이템을 감쌀 것인지 결정</p>
+
+  <style>
+    .container {
+      border: 1px solid;
+    }
+
+    .item {
+      background-color: #ddd;
+      width: 200px;
+      padding: 0.5rem;
+    }
+
+    .flex {
+      display: flex;
+    }
+    
+    .flex-nowrap {
+      flex-wrap: nowrap;
+    }
+
+    .flex-wrap {
+      flex-wrap: wrap;
+    }
+  </style>
+
+  <h3>flex wrap: nowrap (default)</h3>
+  <pre>
+    컨테이너의 크기가 부족하면 아이템이 줄어든다
+  </pre>
+
+  <div class="container flex flex-nowrap">
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+  </div>
+
+  <h3>flex wrap: wrap</h3>
+  <pre>
+    컨테이너의 크기가 부족하면 아이템을 떨어뜨린다
+  </pre>
+
+  <div class="container flex flex-wrap">
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+  </div> -->
+
+
+  <!-- <h1>justify content (row)</h1>
+  <p>아이템의 배열 방식</p>
+
+  <style>
+    .container {
+      border: 1px solid;
+    }
+
+    .item {
+      background-color: #ddd;
+      padding: 0.5rem;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .flex-row {
+      flex-direction: row;
+    }
+    
+    .justify-start {
+      justify-content: flex-start;
+    }
+
+    .justify-center {
+      justify-content: center;
+    }
+
+    .justify-between {
+      justify-content: space-between
+    }
+
+    .justify-end {
+      justify-content: flex-end;
+    }
+  </style>
+
+  <h3>justify content: flex-start (default)</h3>
+
+  <div class="container flex flex-row justify-start">
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+  </div>
+
+  <h3>justify content: center</h3>
+
+  <div class="container flex flex-row justify-center">
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+  </div>
+  
+  <h3>justify content: space-between</h3>
+
+  <div class="container flex flex-row justify-between">
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+  </div>
+
+  <h3>justify content: flex-end</h3>
+
+  <div class="container flex flex-row justify-end">
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+  </div> -->
+
+  <!-- <h1>justify content (col)</h1>
+  <p>아이템의 배열 방식</p>
+
+  <style>
+    .container {
+      border: 1px solid;
+      height: 200px;
+    }
+    
+    .item {
+      background-color: #ddd;
+      padding: 0.5rem;
+    }
+    
+    .flex {
+      display: flex;
+    }
+    
+    .flex-col {
+      flex-direction: column;
+    }
+
+    .justify-start {
+      justify-content: flex-start;
+    }
+
+    .justify-center {
+      justify-content: center;
+    }
+
+    .justify-between {
+      justify-content: space-between
+    }
+
+    .justify-end {
+      justify-content: flex-end;
+    }
+  </style>
+
+  <h3>justify content: flex-start (default)</h3>
+
+  <div class="container flex flex-col justify-start">
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+  </div>
+
+  <h3>justify content: center</h3>
+
+  <div class="container flex flex-col justify-center">
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+  </div>
+  
+  <h3>justify content: space-between</h3>
+
+  <div class="container flex flex-col justify-between">
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+  </div>
+
+  <h3>justify content: flex-end</h3>
+
+  <div class="container flex flex-col justify-end">
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+  </div> -->
+
+  <!-- <style>
+    .container {
+      height: 300px;
+      border: 1px dashed;
+    }
+    .item {
+      display: block;
+      margin: auto;
+      transform: translateY(-80px);
+      width: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 1px solid #ddd;
+    }
+    .bg-image{
+      background-image: url('https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014_1280.jpg');
+      background-position: center;
+      background-size: cover;
+      height: 200px;
+    }
+  </style>
+
+  <div class="container">
+    <div class="bg-image"></div>
+    <div class="item">
+      <img src="https://i.namu.wiki/i/P1Uu2d9I_ToXIs1_EZRdOy8Pqd7HwEnPN4LlU8nf8qk44QVv9fvdodvshE91tS2v8Q_SWWA3Uf4hGFtrsy8jVg.webp" alt="">
+      <h3>다람쥐</h3>
+    </div>
+  </div>
+
+  <h1>Title</h1>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero cumque officia harum corrupti eaque facilis corporis quam. Vel sit sint ab velit natus error dolores, omnis reiciendis sed! Iusto, quisquam.
+  </p> -->
+
+
+  <!-- <h1>align items(row)</h1>
+  <p>행의 위치</p>
+
+    
+  <style>
+    .container {
+      border: 1px solid;
+      height: 100px;
+    }
+
+    .item {
+      background-color: #ddd;
+      padding: 0.5rem;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .flex-row {
+      flex-direction: row;
+    }
+    
+    .items-stretch {
+      align-items: stretch;
+    }
+
+    .items-start {
+      align-items: flex-start;
+    }
+
+    .items-center {
+      align-items: center;
+    }
+
+    .items-end {
+      align-items: flex-end;
+    }
+  </style>
+
+  <h3>align items: stretch (default)</h3>
+  <pre>
+    아이템이 늘어난다
+  </pre>
+
+  <div class="container flex flex-row items-stretch">
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+  </div>
+
+  <h3>align items: flex start</h3>
+  <pre>
+    위에 위치한다
+  </pre>
+
+  <div class="container flex flex-row items-start">
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+  </div>
+  
+  <h3>align items: center</h3>
+  <pre>
+    가운데에 위치
+  </pre>
+
+  <div class="container flex flex-row items-center">
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+  </div>
+
+  <h3>align items: flex-end</h3>
+  <p>
+    아래에 위치
+  </p>
+
+  <div class="container flex flex-row items-end">
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+  </div> -->
+
+
+  <!-- <h1>align items (col)</h1>
+  <p>열의 위치</p>
+
+  <style>
+    .container {
+      border: 1px solid;
+    }
+
+    .item {
+      background-color: #ddd;
+      padding: 0.5rem;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .flex-col {
+      flex-direction: column;
+    }
+    
+    .items-stretch {
+      align-items: stretch;
+    }
+
+    .items-start {
+      align-items: flex-start;
+    }
+
+    .items-center {
+      align-items: center;
+    }
+
+    .items-end {
+      align-items: flex-end;
+    }
+  </style>
+
+  <h3>align items: stretch (default)</h3>
+  <pre>
+    아이템이 늘어난다
+  </pre>
+
+  <div class="container flex flex-col items-stretch">
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+  </div>
+
+  <h3>align items: flex start</h3>
+  <pre>
+    왼쪽에 위치
+  </pre>
+
+  <div class="container flex flex-col items-start">
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+  </div>
+  
+  <h3>align items: center</h3>
+  <pre>
+    가운데에 위치
+  </pre>
+
+  <div class="container flex flex-col items-center">
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+  </div>
+
+  <h3>align items: flex-end</h3>
+  <pre>
+    오른쪽에 위치
+  </pre>
+
+  <div class="container flex flex-col items-end">
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+  </div> -->
+
+
+  <!-- <h1>Q. flex</h1>
+
+  <style>
+    .container {
+      border: 1px solid;
+      width: 200px;
+      height: 100px;
+    }
+
+    .item {
+      background-color: #ddd;
+      padding: 0.5rem;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .flex-row {
+      flex-direction: row;
+    }
+
+    .flex-col {
+      flex-direction: column;
+    }
+
+    .justify-between {
+      justify-content: space-between;
+    }
+
+    .justify-end {
+      justify-content: flex-end;
+    }
+    
+    .items-center {
+      align-items: center;
+    }
+  </style>
+
+  <h3>1</h3>
+  <div class="container flex flex-row justify-between items-center">
+    <div class="item">item</div>
+    <div class="item">item</div>
+  </div>
+
+  <h3>2</h3>
+  <div class="container flex flex-col justify-end items-center">
+    <div class="item">item</div>
+  </div> -->
+
+
+  <!-- <h1>flex grow</h1>
+  <p>
+    아이템의 크기 증가
+  </p>
+  <style>
+    .container {
+      border: 1px solid;
+    }
+
+    .item {
+      background-color: #ddd;
+      padding: 0.5rem;
+    }
+
+    .flex {
+      display: flex;
+    }
+    
+    .grow-0 {
+      /* 기본값 */
+      flex-grow: 0;
+    }
+
+    .grow {
+      background-color: #0bf;
+      /* 컨테이너의 빈공간을 다 채울때까지 크기가 증가한다 */
+      flex-grow: 1;
+    }
+  </style>
+
+  <div class="container flex">
+    <div class="item grow-0">item</div>
+    <div class="item grow">grow item</div>
+    <div class="item grow-0">item</div>
+  </div> -->
+
+
+  <!-- <h1>flex shrink</h1>
+  <p>아이템의 크기 감소</p>
+
+  <style>
+    .container {
+      border: 1px solid;
+    }
+    
+    .item {
+      background-color: #ddd;
+      padding: 0.5rem;
+      width: 200px;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .shrink {
+      /* 기본값 */
+      flex-shrink: 1;
+    }
+
+    .shrink-0 {
+      background-color: #0bf;
+      flex-shrink: 0;
+    }
+  </style>
+
+  <div class="container flex">
+    <div class="item shrink">item</div>
+    <div class="item shrink-0">unshrinkable item</div>
+    <div class="item shrink">item</div>
+  </div> -->
+
+
+  <!-- <h1>flex basis</h1>
+  <p>아이템의 크기</p>
+  <pre>
+    row: 아이템의 넓이
+    col: 아이템의 높이
+  </pre>
+
+  <style>
+    .container {
+      border: 1px solid;
+    }
+
+    .item {
+      background-color: #ddd;
+      padding: 0.5rem;
+      flex-basis: 50px;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .flex-row {
+      flex-direction: row;
+    }
+
+    .flex-col {
+      flex-direction: column;
+    }
+  </style>
+
+  <h3>flex direction: row</h3>
+
+  <div class="container flex flex-row">
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+  </div>
+
+  <h3>flex direction: column</h3>
+
+  <div class="container flex flex-col">
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+  </div> -->
+
+  <!-- <h1>flex order</h1>
+  <p>
+    아이템의 순서
+  </p>
+
+  <style> 
+    .container {
+      border: 1px solid;
+    }
+    
+    .item {
+      background-color: #ddd;
+      padding: 0.5rem;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .order-none {
+      /* 기본값 */
+      order: 0;
+    }
+
+    .order-1 {
+      order: 1
+    }
+
+    .order-2 {
+      order: 2
+    }
+
+    .order-3 {
+      order: 3
+    }
+  </style>
+
+
+  <div class="container flex">
+    <div class="item order-2">item 1</div>
+    <div class="item order-3">item 2</div>
+    <div class="item order-none">item 3</div>
+    <div class="item order-1">item 4</div>
+  </div> -->
+
+
+  <!-- <h1>Q. position</h1>
+
+  <style>
+    .container {
+      width: 100px;
+      height: 100px;
+      border: 1px solid;
+    }
+
+    .item {
+      width: 50px; 
+      height: 50px;
+      background-color: #000;
+    }
+    
+    .relative {
+      position: relative;
+    }
+
+    .absolute {
+      position: absolute;
+    }
+
+    .top-0 {
+      top: 0;
+    }
+
+    .left-0 {
+      left: 0;
+    }
+
+    .bottom-0 {
+      bottom: 0;
+    }
+    
+    .right-0 {
+      right: 0;
+    }
+
+    .top-25px {
+      top: 25px;
+    }
+
+    .left-25px {
+      left: 25px;
+    }
+  </style>
+
+  <h3>check</h3>
+
+  <div class="container relative">
+    <div class="item absolute top-0 left-0"></div>
+    <div class="item absolute right-0 bottom-0"></div>
+  </div>
+
+  <h3>center</h3>
+
+  <div class="container">
+    <div class="item relative top-25px left-25px"></div>
+  </div> -->
+
+
+  <!-- <h1>grid</h1>
+  <p>격자모양의 레이아웃</p>
+
+  <style>
+    .container {
+      border: 1px dashed;
+    }
+  
+    .item {
+      /* grid item */
+      background-color: #ddd;
+      padding: 0.5rem;
+    }
+  
+    .grid {
+      /* grid container */
+      display: grid;
+    }
+  
+    .grid-cols-3 {
+      /* 컬럼 갯수 */
+      /* minmax(0, 1fr): 컨텐츠와 상관없이 아이템의
+      넓이를 동일하게 한다 */
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  
+    .gap-2 {
+      /* 아이템 사이의 공간 */
+      gap: 0.5rem;
+    }
+  </style>
+  
+  <div class="container grid grid-cols-3 gap-2">
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+  </div> -->
+
+
+  <!-- <h1>grid</h1>
+  <p>열 병합</p>
+
+  <style>
+    .container {
+      border: 1px dashed;
+    }
+
+    .item {
+      padding: 0.5rem;
+      background-color: #ddd;
+    }
+
+    .grid {
+      display: grid;
+    }
+
+    .gap-2 {
+      gap: 0.5rem;
+    }
+
+    .grid-cols-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .col-span-2 {
+      grid-column-start: span 2;
+    }
+  </style>
+
+  <div class="container grid gap-2 grid-cols-3">
+    <div class="item">item 1</div>
+    <div class="item">item 2</div>
+    <div class="item">item 3</div>
+    <div class="item col-span-2">item 4</div>
+    <div class="item">item 5</div>
+    <div class="item">item 6</div>
+    <div class="item col-span-2">item 7</div>
+  </div> -->
+
+
+  <!-- <h1>Q. grid</h1>
+
+  <style>
+    .container {
+      border: 1px dashed;
+    }
+
+    .item {
+      padding: 0.5rem;
+      background-color: #ddd;
+    }
+
+    .grid {
+      display: grid;
+    }
+
+    .gap-2 {
+      gap: 0.5rem;
+    }
+
+    .grid-cols-4 {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .col-span-2 {
+      grid-column-start: span 2;
+    }
+
+    .col-span-4 {
+      grid-column-start: span 4;
+    }
+  </style>
+
+  <div class="container grid gap-2 grid-cols-4">
+    <div class="item col-span-2">item</div>
+    <div class="item col-span-2">item</div>
+    <div class="item col-span-4">item</div>
+    <div class="item">item</div>
+    <div class="item col-span-2">item</div>
+    <div class="item">item</div>
+  </div> -->
+
+
+  <!-- <h1>media rule</h1>
+  <p>
+    디바이스에 따라 다르게 레이아웃을 적용할 수 있다
+  </p>
+
+  <style>
+    .container {
+      border: 1px dashed;
+    }
+
+    .item {
+      background-color: #ddd;
+      padding: 0.5rem;
+    }
+
+    .grid {
+      display: grid;
+    }
+
+    .gap-2 {
+      gap: 0.5rem;
+    }
+
+    /* default column count */
+    .grid-cols-n {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    @media (min-width: 640px) {
+      .grid-cols-n {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (min-width: 768px) {
+      .grid-cols-n {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .grid-cols-n {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+    }
+
+    @media (min-width: 1280px) {
+      .grid-cols-n {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+      }
+    }
+
+    @media (min-width: 1536px) {
+      .grid-cols-n {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+      }
+    }
+  </style>
+
+  <h3>Breakpoint</h3>
+
+  <ul>
+    <li>Mobile Device(default): ~ 640px</li>
+    <li>Small Device: 641px ~ 767px</li>
+    <li>Medium Device: 768px ~ 1023px</li>
+    <li>Large Device: 1024px ~ 1279px</li>
+    <li>Extra Large Device: 1280px ~ 1535px</li>
+    <li>2 Extra Large Device: 1536px ~ </li>
+  </ul>
+
+  <div class="container grid gap-2 grid-cols-n">
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+  </div> -->
+
+
+  <h1>grid columns start, end</h1>
+
+  <style>
+    .container {
+      border: 1px dashed;
+    }
+
+    .grid {
+      display: grid;
+    }
+
+    .gap-2 {
+      gap: 0.5rem;
+    }
+
+    .item {
+      padding: 0.5rem;
+      background-color: #ddd;
+    }
+
+    .grid-cols-6 {
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+
+    .col-start-1 {
+      grid-column-start: 1;
+    }
+
+    .col-start-2 {
+      grid-column-start: 2;
+    }
+
+    .col-start-5 {
+      grid-column-start: 5;
+    }
+
+    .col-end-3 {
+      grid-column-end: 3;
+    }
+    
+    .col-end-6 {
+      grid-column-end: 6;
+    }
+
+    .col-end-7 {
+      grid-column-end: 7;
+    }
+  </style>
+
+
+  <div class="container grid gap-2 grid-cols-6">
+    <div class="item col-start-2 col-end-6">item 1</div>
+    <div class="item col-start-1 col-end-3">item 2</div>
+    <div class="item col-start-5 col-end-7">item 3</div>
+    <div class="item col-start-1 col-end-7">item 4</div>
+  </div>
+
+
+
+  
+</body>
+</html>
